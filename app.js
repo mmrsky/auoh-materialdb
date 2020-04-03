@@ -34,7 +34,7 @@ app.get("/api/material", material_controller.api_get_materials);
 
 //wejT1WbPfK3kQiPV
 
-const database_uri = "mongodb+srv://server:wejT1WbPfK3kQiPV@cluster0-wizbr.mongodb.net/test?retryWrites=true&w=majority";
+const database_uri = "mongodb+srv://server:wejT1WbPfK3kQiPV@cluster0-wizbr.mongodb.net/materialdb?retryWrites=true&w=majority";
 
 mongoose.connect(database_uri, {
     useCreateIndex: true,
