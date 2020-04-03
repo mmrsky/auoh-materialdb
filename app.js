@@ -32,6 +32,8 @@ app.post("/api/material", material_controller.api_post_material);
 app.get("/api/material", material_controller.api_get_materials);
 // 
 
+app.delete("/api/material/:id", material_controller.api_delete_material);
+
 //wejT1WbPfK3kQiPV
 
 const database_uri = "mongodb+srv://server:wejT1WbPfK3kQiPV@cluster0-wizbr.mongodb.net/materialdb?retryWrites=true&w=majority";
