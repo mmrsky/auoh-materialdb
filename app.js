@@ -10,6 +10,8 @@ const material_controller = require('./materialcontroller');
 // npm install nodemon --save-dev
 // npm install mongoose
 // npm run start-dev
+app.use("/", express.static("public"));
+
 
 app.use(body_parser.json());
 app.use(body_parser.urlencoded( {
@@ -29,10 +31,14 @@ app.post("/api/material", material_controller.api_post_material);
 //CREATE
 // api.domain.com/materials
 // READ
-app.get("/api/material", material_controller.api_get_materials);
+app.get("/api/materials", material_controller.api_get_materials);
 // 
 
 app.delete("/api/material/:id", material_controller.api_delete_material);
+
+// patch korvaa tietyt kentät
+// put korvaa koko tiedon
+app.put("/api/material/:id", material_controller.api_put_material);
 
 //wejT1WbPfK3kQiPV
 
